@@ -1,0 +1,1 @@
+Placeholder content for caboodle_data_model.md
