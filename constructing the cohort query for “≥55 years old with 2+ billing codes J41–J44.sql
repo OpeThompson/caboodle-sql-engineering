@@ -10,7 +10,7 @@ WHERE dt.Type = 'ICD-10-CM'
 SELECT baf.PatientKey
 INTO #EligiblePatients
 FROM FilteredAccess.BillingAccountFact baf
-JOIN CDW.FilteredAccess.DiagnosisBridge db ON baf.DiagnosisComboKey = db.DiagnosisComboKey
+JOIN FilteredAccess.DiagnosisBridge db ON baf.DiagnosisComboKey = db.DiagnosisComboKey
 WHERE db.DiagnosisKey IN (SELECT DiagnosisKey FROM #COPD_Diagnoses)
   AND baf.AccountCreateDateKey BETWEEN 20050328 AND 20120228
 GROUP BY baf.PatientKey
