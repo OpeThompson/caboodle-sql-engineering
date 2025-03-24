@@ -1,1 +1,0 @@
-Placeholder content for caboodle_advanced.sql
